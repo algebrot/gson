@@ -39,7 +39,8 @@ public final class LazilyParsedNumber extends Number {
       try {
         return (int) Long.parseLong(value);
       } catch (NumberFormatException nfe) {
-        return new BigDecimal(value).intValue();
+        return new BigInteger(value).intValue();
+        //return new BigDecimal(value).intValue();
       }
     }
   }
@@ -49,7 +50,8 @@ public final class LazilyParsedNumber extends Number {
     try {
       return Long.parseLong(value);
     } catch (NumberFormatException e) {
-      return new BigDecimal(value).longValue();
+      return new BigInteger(value).longValue();
+      //return new BigDecimal(value).longValue();
     }
   }
 
